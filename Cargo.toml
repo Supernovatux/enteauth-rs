@@ -1,0 +1,16 @@
+[package]
+name = "enteauth-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.102"
+base64 = "0.22.1"
+dirs = "6.0.0"
+rusqlite = { version = "0.38.0", features = ["bundled"] }
+secret-service = { version = "5.1.0", features = ["rt-tokio-crypto-rust"] }
+serde_json = "1.0.149"
+sodiumoxide = "0.2.7"
+tokio = { version = "1.50.0", features = ["rt-multi-thread", "macros"] }
+totp-rs = { version = "5.7.0", features = ["otpauth"] }
+url = "2.5.8"
