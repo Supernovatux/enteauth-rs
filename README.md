@@ -27,6 +27,7 @@ cargo build --release
 `--no-copy` and `--json` available as options.
 Tries to use wl-copy, xclip and xsel to copy the code. Codes are copies automatically only if the query returns a simple output.
 
+If build fails due a linker error and if you are using a custom linker like mold, ensure that `RUSTFLAGS` is set in makepkg with the same custom linker, refer [Arch wiki](https://wiki.archlinux.org/title/Makepkg#Using_mold_linker) for details.
 
 Available on AUR [enteauth-rs-git](https://aur.archlinux.org/packages/enteauth-rs-git)
 
