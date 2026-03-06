@@ -25,7 +25,7 @@ cargo build --release
 ./target/release/enteauth-rs <query>
 ```
 `--no-copy` and `--json` available as options.
-Tries to use wlcopy, xclip and xsel to copy the code. Codes are copies automatically only if the query returns a simple output.
+Tries to use wl-copy, xclip and xsel to copy the code. Codes are copies automatically only if the query returns a simple output.
 
 
 Available on AUR [enteauth-rs-git](https://aur.archlinux.org/packages/enteauth-rs-git)
