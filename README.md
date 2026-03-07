@@ -1,14 +1,14 @@
 # enteauth-rs
 
-Read TOTP/HOTP 2FA codes from a local [Ente Auth](https://ente.io/auth/) installation — no app, no network.
+Read TOTP/HOTP 2FA codes from a local [Ente Auth](https://ente.io/auth/) installation.
 
 ## Requirements
 
 - Ente Auth installed and set up on Linux with a keyring (Tested with gnome keyring, report an issue if it fails with Kwallet)
-- To sync new codes launch the Ente auth gui app.
+- To sync new codes, launch the Ente auth gui app and sync there first.
 
 ## Features
-- Seamless migration, assuming you aldready use ente-auth no extra configuration is needed.
+- Seamless migration, assuming you already use ente-auth no extra configuration is needed.
 - Practically no resource usage compared the original app.
 - Fast
 
@@ -25,7 +25,7 @@ cargo build --release
 ./target/release/enteauth-rs <query>
 ```
 `--no-copy` and `--json` available as options.
-Tries to use wl-copy, xclip and xsel to copy the code. Codes are copies automatically only if the query returns a simple output.
+Tries to use wl-copy, xclip and xsel to copy the code. Codes are copied automatically only if the query returns a single output.
 
 If build fails due a linker error and if you are using a custom linker like mold, ensure that `RUSTFLAGS` is set in makepkg with the same custom linker, refer [Arch wiki](https://wiki.archlinux.org/title/Makepkg#Using_mold_linker) for details.
 
