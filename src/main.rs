@@ -184,7 +184,11 @@ async fn main() -> Result<()> {
 
     let db = db_path();
     if !db.exists() {
-        bail!("Database not found at {}", db.display());
+        bail!(
+            "Ente Auth database not found at {}.\n\
+             Please log in via the official Ente Auth app first so the local database is created.",
+            db.display()
+        );
     }
 
     let rows = get_entities(&db)?;
